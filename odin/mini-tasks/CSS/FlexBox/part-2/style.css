@@ -1,0 +1,29 @@
+.columns {
+  display: flex;
+  gap: 2rem;
+  border: 10px solid firebrick;
+  align-items: center;
+}
+
+.card {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #7ae720;
+}
+
+@media (min-width: 750px) {
+  .columns {
+    flex-direction: row;
+  }
+}
+
+.columns > * {
+  flex-basis: 100%;
+}
+
+.card:nth-child(2) {
+  background-color: #f7e720;
+  align-self: baseline;
+}

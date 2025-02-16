@@ -1,0 +1,15 @@
+ul {
+  border: 3px solid #a3d8ff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+li {
+  border: 2px solid #ff6b6b;
+}
