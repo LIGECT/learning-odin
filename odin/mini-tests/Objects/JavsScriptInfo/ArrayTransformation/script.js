@@ -1,14 +1,15 @@
-let vasya = { name: "Вася", age: 25 };
-let petya = { name: "Петя", age: 30 };
-let masha = { name: "Маша", age: 28 };
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
 
-let arr = [vasya, petya, masha];
-
-function sortByAge(arr) {
-  arr.sort((a, b) => a.age - b.age);
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
-sortByAge(arr);
 
-console.log(arr[0].name); // Ожидаем Вася
-console.log(arr[1].name); // Ожидаем Маша
-console.log(arr[2].name); // Ожидаем Петя
+let arr = [1, 2, 3];
+shuffle(arr);
+shuffle(arr);
+shuffle(arr);
+shuffle(arr);
+
+console.log(arr);
