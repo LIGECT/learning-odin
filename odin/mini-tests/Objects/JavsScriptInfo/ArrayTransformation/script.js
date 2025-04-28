@@ -1,13 +1,12 @@
-let arr = [5, 3, 8, 1];
+let arr = ["HTML", "JavaScript", "CSS"];
 
-function filterRangeInPlace(arr, a, b) {
-  for (let i = arr.length - 1; i >= 0; i--) {
-    if (arr[i] < a || arr[i] > b) {
-      arr.splice(i, 1);
-    }
-  }
+function copySorted(arr) {
+  //code
+  let newArr = [...arr];
+  return newArr.sort();
 }
 
-filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+let sorted = copySorted(arr);
 
-console.log(arr);
+console.log(sorted); // CSS, HTML, JavaScript
+console.log(arr); // HTML, JavaScript, CSS (без изменений)
