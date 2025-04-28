@@ -1,12 +1,39 @@
-let arr = ["HTML", "JavaScript", "CSS"];
+class Calculator {
+  constructor() {
+    //code
+    this.methods = {
+      "+": (a, b) => a + b,
+      "-": (a, b) => a - b,
+    };
+  }
 
-function copySorted(arr) {
-  //code
-  let newArr = [...arr];
-  return newArr.sort();
+  calculate(str) {
+    let parts = str.split(" ");
+    let a = +parts[0];
+    let b = +parts[2];
+    let operator = parts[1];
+    let operationFunc = this.methods[operator];
+
+    if (!operationFunc) {
+      throw new Error(`Оператор "${operator}" не найден`);
+    }
+
+    return operationFunc(a, b);
+  }
+
+  addMethod(name, func) {
+    //code
+
+    this.methods[name] = func;
+  }
 }
 
-let sorted = copySorted(arr);
+let calc = new Calculator();
 
-console.log(sorted); // CSS, HTML, JavaScript
-console.log(arr); // HTML, JavaScript, CSS (без изменений)
+console.log(calc.calculate("3 + 7"));
+let powerCalc = new Calculator();
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+console.log(powerCalc.calculate("2 ** 3"));
+console.log(powerCalc.calculate("10 * 5"));
