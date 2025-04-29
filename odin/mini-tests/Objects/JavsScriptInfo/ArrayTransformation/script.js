@@ -1,15 +1,13 @@
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-
-    [array[i], array[j]] = [array[j], array[i]];
-  }
+function getAverageAge(users) {
+  //code
+  let sumUserAge = users.reduce((sum, user) => sum + user.age, 0);
+  return sumUserAge / users.length;
 }
 
-let arr = [1, 2, 3];
-shuffle(arr);
-shuffle(arr);
-shuffle(arr);
-shuffle(arr);
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
 
-console.log(arr);
+let arr = [vasya, petya, masha];
+
+console.log(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
