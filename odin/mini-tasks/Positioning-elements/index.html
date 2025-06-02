@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning Practice</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Практика позиционирования</h1>
+
+    <div class="container">
+      <p class="content-block">
+        Это первый блок контента. Он занимает свое обычное место в потоке
+        документа.
+      </p>
+      <p class="content-block">
+        Второй блок контента. Прокрутите вниз, чтобы увидеть больше.
+      </p>
+      <p class="content-block">Третий блок контента.</p>
+
+      <div id="target-element">Целевой элемент</div>
+
+      <p class="content-block">
+        Четвертый блок контента. Другие элементы будут вести себя так, как будто
+        "Целевой элемент" находится на своем обычном месте при статическом и
+        относительном позиционировании.
+      </p>
+      <p class="content-block">Пятый блок контента.</p>
+      <p class="content-block">Шестой блок контента.</p>
+      <p class="content-block">Седьмой блок контента.</p>
+      <p class="content-block">Восьмой блок контента.</p>
+      <p class="content-block">Девятый блок контента.</p>
+      <p class="content-block">
+        Десятый блок контента. Липкий элемент перестанет "липнуть", когда этот
+        контейнер выйдет за пределы видимой области просмотра.
+      </p>
+    </div>
+
+    <div class="outside-container">
+      <p>
+        Это элемент вне контейнера. Используется для демонстрации `position:
+        fixed` относительно всей области просмотра.
+      </p>
+    </div>
+  </body>
+</html>
