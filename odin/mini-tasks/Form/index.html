@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Мой первый шаблон</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Forms epta 🚀</h1>
+
+      <!-- Вот сюда кидай свою форму -->
+      <!-- Пример простой формы -->
+      <form action="https://httpbin.org/post" method="post">
+        <div>
+          <label for="first_name">First name:</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="Bob..."
+          />
+        </div>
+
+        <div>
+          <label for="last_name">Last name:</label>
+          <input type="text" name="last_name" id="last_name" />
+        </div>
+
+        <div>
+          <label for="age">Age:</label>
+          <input type="age" name="age" id="age" />
+        </div>
+
+        <button type="submit">submit</button>
+      </form>
+
+      <!-- Конец формы -->
+    </div>
+  </body>
+</html>

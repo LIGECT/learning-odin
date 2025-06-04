@@ -1,0 +1,38 @@
+:root {
+  --header-height: 3rem; /* Высота шапки */
+  --footer-height: 40px; /* Высота футера */
+  /* Расчет высоты основного контента */
+  --main-height: calc(
+    100vh - calc(var(--header-height) + var(--footer-height))
+  );
+}
+
+/* Применяем рассчитанную высоту к элементу main */
+main {
+  /* ... другие стили для main из HTML ... */
+  height: var(--main-height);
+}
+
+/* Применяем высоты к шапке и футеру, используя переменные для наглядности */
+/* (хотя в данном примере они определяются паддингами,
+     это показывает, как можно использовать переменные в других местах) */
+header {
+  /* background-color: lightblue; */
+  /* padding: 1rem; */
+  /* text-align: center; */
+  height: var(
+    --header-height
+  ); /* Фактическая высота будет чуть больше из-за padding */
+  box-sizing: border-box; /* Чтобы padding не добавлялся к высоте */
+}
+
+footer {
+  /* background-color: lightgreen; */
+  /* padding: 1rem; */
+  /* text-align: center; */
+  /* margin-top: auto; */
+  height: var(
+    --footer-height
+  ); /* Фактическая высота будет чуть больше из-за padding */
+  box-sizing: border-box; /* Чтобы padding не добавлялся к высоте */
+}
