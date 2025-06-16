@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8" />
-    <title>Мой первый шаблон</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Favorite fruit start</title>
   </head>
+
   <body>
-    <div class="container">
-      <h1>Forms epta 🚀</h1>
-
-      <!-- Вот сюда кидай свою форму -->
-      <!-- Пример простой формы -->
-      <form action="https://httpbin.org/post" method="post">
-        <div>
-          <label for="first_name">First name:</label>
-          <input
-            type="text"
-            id="first_name"
-            name="first_name"
-            placeholder="Bob..."
-          />
-        </div>
-
-        <div>
-          <label for="last_name">Last name:</label>
-          <input type="text" name="last_name" id="last_name" />
-        </div>
-
-        <div>
-          <label for="age">Age:</label>
-          <input type="age" name="age" id="age" />
-        </div>
-
-        <button type="submit">submit</button>
-      </form>
-
-      <!-- Конец формы -->
-    </div>
+    <form>
+      <div>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input
+          type="text"
+          id="choose"
+          name="i_like"
+          required
+          minlength="6"
+          maxlength="6"
+        />
+      </div>
+      <div>
+        <label for="number">How many would you like?</label>
+        <input
+          type="number"
+          id="number"
+          name="amount"
+          value="1"
+          min="1"
+          max="10"
+        />
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
   </body>
 </html>
