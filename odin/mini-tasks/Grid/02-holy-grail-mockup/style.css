@@ -90,6 +90,11 @@ li {
   background-color: #c50208;
   grid-area: nav;
 }
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
 
 .nav ul li {
   font-size: 16px;
