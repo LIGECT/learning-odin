@@ -59,6 +59,12 @@ li {
 .sidebar {
   background-color: #c50208;
   grid-area: sidebar;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  gap: 50px;
+  justify-items: stretch;
+  align-items: stretch;
 }
 
 .sidebar .photo {
@@ -67,6 +73,8 @@ li {
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: grid;
+  place-items: center;
 }
 
 .sidebar .side-content {
@@ -74,6 +82,8 @@ li {
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
+  place-items: center;
 }
 
 .nav {
