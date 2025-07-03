@@ -1,9 +1,34 @@
-function Player(name) {
-  this.name = name;
-}
+let Character = {
+  health: 100,
+  greet() {
+    return "Hello, I'm character";
+  },
 
-const player1 = new Player("Илья");
-const player2 = new Player("Вася");
+  damage(amount) {
+    this.health -= amount;
+  },
+};
 
-console.log(Object.getPrototypeOf(player1) === Player.prototype); // true
-console.log(Object.getPrototypeOf(player2) === Player.prototype); // true
+let Warrior = {
+  strength: 30,
+  attack() {
+    return "Attacked with sword!";
+  },
+  __proto__: Character,
+};
+
+let dragonSlayer = {
+  hasDragonScale: true,
+  attack() {
+    return "Fire strike!";
+  },
+  __proto__: Warrior,
+};
+
+console.log(dragonSlayer.greet());
+console.log(dragonSlayer.attack());
+console.log(dragonSlayer.strength);
+console.log(dragonSlayer.health);
+
+dragonSlayer.damage(10);
+console.log(dragonSlayer.health);
