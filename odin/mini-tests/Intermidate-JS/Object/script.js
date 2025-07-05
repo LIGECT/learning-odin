@@ -1,34 +1,25 @@
-let Character = {
-  health: 100,
-  greet() {
-    return "Hello, I'm character";
-  },
+let hamster = {
+  stomach: [],
 
-  damage(amount) {
-    this.health -= amount;
+  eat(food) {
+    this.stomach.push(food);
   },
 };
 
-let Warrior = {
-  strength: 30,
-  attack() {
-    return "Attacked with sword!";
-  },
-  __proto__: Character,
+let speedy = {
+  __proto__: hamster,
+  stomach: [],
 };
 
-let dragonSlayer = {
-  hasDragonScale: true,
-  attack() {
-    return "Fire strike!";
-  },
-  __proto__: Warrior,
+let lazy = {
+  __proto__: hamster,
+  stomach: [],
 };
 
-console.log(dragonSlayer.greet());
-console.log(dragonSlayer.attack());
-console.log(dragonSlayer.strength);
-console.log(dragonSlayer.health);
+// Этот хомяк нашёл еду
+speedy.eat("apple");
+console.log(speedy.stomach); // apple
 
-dragonSlayer.damage(10);
-console.log(dragonSlayer.health);
+// У этого хомяка тоже есть еда. Почему? Исправьте
+
+console.log(lazy.stomach); // apple
