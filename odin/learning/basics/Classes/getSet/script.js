@@ -11,6 +11,7 @@ class User {
       this._name = val;
     }
   }
+
   get name() {
     return this._name;
   }
